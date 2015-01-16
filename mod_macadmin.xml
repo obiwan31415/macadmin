@@ -1,0 +1,30 @@
+<?xml version="1.0" ?>
+<extension type="module" version="3.3.6" method="upgrade">
+	<name>MAC address admin</name>
+	<author>Rafal Gawlik</author>
+	<version>1.0.0</version>
+	<description>Tools to administer MAC db.</description>
+	<files>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_macadmin.xml</filename>
+		<filename module="mod_macadmin">mod_macadmin.php</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+		<folder>js</folder>	
+		<folder>tmpl</folder>
+	</files>
+	<install>
+	</install>
+	<uninstall>
+	</uninstall>
+	<config>
+		<fields name="params">
+			<fieldset name="email_config" label="Email Sending Config">
+				<field name="sender_name" type="text" label="Sender Name"></field>
+				<field name="sender_email" type="text" label="Sender E-mail"></field>
+				<field name="receiver_email" type="text" label="Receiver E-mail"></field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

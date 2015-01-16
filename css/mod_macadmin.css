@@ -1,0 +1,68 @@
+label, input{
+    display: block;
+}
+body#shadow {
+    line-height: 1.2em !important;
+}
+#titlemod {
+    font-size:16px;
+    color:green;
+    display:block;
+}
+h3.compreg {
+    color: green;
+}
+.regbox {
+    display: inline-table;
+    height: 50px;
+    margin-right: 15px;
+}
+.macbox {
+    height: 40px;
+}
+input {
+    height: 15px;
+    width: 150px; 
+}
+input:focus,textarea:focus {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px
+        rgba(56, 255, 0, 0.6) !important;
+    outline: 0 none;
+}
+input#email {
+    width:100px;
+    margin-right: 15px;
+    clear: left;
+}
+label#labelcomment {
+    margin-top: 15px;
+}
+textarea#uwagi {
+    width: 98%;
+    height: 60px;
+    font-family: Tahoma, sans-serif;
+}
+input#btn_send {
+    width: 40%;
+    border: 3px solid #005c11;
+    background: #DFFFAA;
+    margin-top: 0px;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 10px 31px;
+    border-radius: 9px;
+    color: #005c11;
+    font-size: 19px;
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+input#btn_send:hover {
+   background: #00FF00;
+}
+input.invalid {
+    border-color: rgb(185, 74, 72) !important;
+    background-color: rgb(255, 240, 240) !important;
+    box-shadow: 0 1px 1px rgba(185, 74, 72, 0.075) inset, 0 0 8px
+        red !important;
+}

@@ -1,12 +1,12 @@
 <?php
 defined('_JEXEC') or die('Access denied');
 $doc=JFactory::getDocument();
-$doc->addStyleSheet(JURI::root().'/modules/mod_macadmin/css/mod_macadmin.css');
+//$doc->addStyleSheet(JURI::root().'modules/mod_macadmin/css/mod_macadmin.css');
 //$doc->addScript('modules/mod_macadmin/js/mod_macadmin.js');
-JHTML::_('behavior.formvalidation');
+//JHTML::_('behavior.formvalidation');
 ?>
-<form class="form-validate" id="compregister" name="compregister" method="POST" >
-	<h3 class="compreg">Adres MAC</h3>
+<form class="form-validate" id="macadmin" name="macadmin" method="POST" >
+	<h3 class="compreg">Podaj adres MAC</h3>
 	<div class="macbox">
 		<input class="required validate-mac" type="text" id="macaddress" name="macaddress" />
 	</div>
@@ -28,9 +28,9 @@ JHTML::_('behavior.formvalidation');
 			<input class="required validate-myemail" type="text" id="email" name="email" />@ippt.pan.pl
 		</div>
 	<label for="comment" id="labelcomment">UWAGI:</label>
-	<textarea id="uwagi" name="comment" placeholder="Tu wpisz swoje uwagi."></textarea> -->
-	<h3 class="compreg"></h3>
+	<textarea id="uwagi" name="comment" placeholder="Tu wpisz swoje uwagi."></textarea>
+	<h3 class="compreg"></h3> -->
 
-	<?php //echo JHtml::_('form.token'); ?>
-	<input type="submit" class="validate" id="btn_send" name="btn_send" value="Wyślij" />
+	<?php echo JHtml::_('form.token'); ?>
+	<input type="submit" class="validate" id="mac_send" name="mac_send" value="Wyślij" />
 </form>

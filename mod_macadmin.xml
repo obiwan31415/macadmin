@@ -14,10 +14,6 @@
 		<folder>js</folder>	
 		<folder>tmpl</folder>
 	</files>
-	<install>
-	</install>
-	<uninstall>
-	</uninstall>
 	<config>
 		<fields name="params">
 			<fieldset name="email_config" label="Email Sending Config">

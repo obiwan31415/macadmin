@@ -1,6 +1,6 @@
 <?php
 defined('_JEXEC') or die('Access denied');
-class Computer {
+/*class macAdminComputer {
 	private $macaddress; //id
 	private $firstname;
 	private $lastname;
@@ -62,7 +62,7 @@ class Computer {
 		return strtolower($result);
 	}
 }
-
+*/
 // UPDATE  `joomla`.`f43gp_comp_register` SET  `firstname` =  'Darek',
 // `lastname` =  'Dabacki',
 // `email` =  'abc',
@@ -70,17 +70,38 @@ class Computer {
 // `fixedip` =  'yes' WHERE  `f43gp_comp_register`.`id` =146;
 
 class ModMACAdmin {
-	public static function selectData($mac, $params) {
-		$db = JFactory::getDBO();
-		$query = $db->getQuery(true);
-		$query->select($db->quoteName(array('macaddress', 
-			'firstname', 'lastname', 'email', 'room', 'fixedip', 'comment')));
-		$query->from($db->quoteName('#__comp_register'));
-		$query->where($db->quoteName().'='.$mac);
-		$db->setQuery($query);
-		$results = $db->loadObjectList();
-		return $results;
+	public static function selectData($input, $params) {
+		$mac = 'ab:12:34:56:78:90'; //$this->convertToMAC();
+
+		//$db = JFactory::getDBO();
+		//$query = $db->getQuery(true);
+		//$query->select($db->quoteName(array('macaddress', 'firstname', 'lastname', 'email', 'room', 'fixedip', 'comment')));
+		//SELECT `firstname`, `lastname`, `email` FROM `f43gp_comp_register` WHERE `macaddress` = 'ab:12:34:cd:78:ef'
+		//$query->select('macaddress');
+		//$query->from($db->quoteName('#__comp_register'));
+		//$query->where($db->quoteName('macaddress').' = '.'ab:12:34:56:78:90');
+		//$query2 = "SELECT `firstname`, `lastname`, `email` FROM  `#__comp_register` WHERE `macaddress` = 'ab:12:34:cd:78:ef'";
+		//$db->setQuery($query2);
+		//$result = $db->loadRow();
+		$result = "dupa";
+		return $result;
 	}
+
+	private function convertToMAC() {
+		/*$pattern1="/^([0-9a-fA-F]{2}[-]){5}([0-9a-fA-F]{2})$/";
+		$pattern2="/^([0-9a-fA-F]{2}[:]){5}([0-9a-fA-F]{2})$/";
+		if(preg_match($pattern1,$input) == 1) {
+			$chars = explode("-", $input);
+		} else if(preg_match($pattern2,$input) == 1) {
+			$chars = explode(":", $input);
+		} else { //$pattern =  "/^[0-9a-fA-F]{12}$/"
+			$chars = str_split($input, 2);
+		}
+		$result = implode(":", $chars);*/
+		return "ab:12:34:56:78:90";
+		//return strtolower($result);
+	}
+
 	public static function updateData($computer, $params) {
 		$db = JFactory::getDBO();
 		$query="UPDATE `#__comp_register` SET 
